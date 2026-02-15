@@ -26,6 +26,7 @@ Students will:
 ```bash
 git config core.hooksPath .githooks
 chmod +x .githooks/pre-commit
+```
 
 ## Step 2: CI Pipeline
 
