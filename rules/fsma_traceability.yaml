@@ -1,1 +1,23 @@
+apiVersion: compliance/v1
+kind: ComplianceRule
+
+metadata:
+  name: fsma-traceability
+  version: "1.0.0"
+  source: "FDA FSMA Section 204 Final Rule"
+
+spec:
+  authority: "U.S. Food and Drug Administration"
+  regulation: "FSMA Section 204 – Food Traceability Rule"
+  effectiveDate: "2026-01-20"
+
+  description: >
+    Maintenance of Key Data Elements (KDEs) for Critical Tracking Events (CTEs)
+    for certain foods.
+
+  requiredFields:
+    - lotCode
+    - sourceFacility
+    - destinationFacility
+    - timestamp
 
