@@ -1,0 +1,25 @@
+name: Compliance CI
+
+on:
+  push:
+    paths:
+      - "rules/*.yaml"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install Dependencies
+        run: pip install pyyaml jsonschema
+
+      - name: Validate Schema
+        run: python scripts/validate_schema.py rules/fsma_traceability.yaml
+
+      - name: Generate CRD
+        run: python scripts/generate_crd.py rules/fsma_traceability.yaml
+
+      - name: Verify Static Taint
+        run: python scripts/verify_taint.py
