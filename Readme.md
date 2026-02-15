@@ -36,11 +36,11 @@ Validates schema, regenerates CRD, verifies static taint
 
 # Step 3: Deliverables
 
-Static Taint Tracking: CI + scripts prevent tampering of regulatory rules.
+**3.1 Static Taint Tracking:** CI + scripts prevent tampering of regulatory rules.
 
-Address Regulation Updates: Pre-commit hooks + K8s CRD propagation enforce rule changes.
+**3.2 Address Regulation Updates:** Pre-commit hooks + K8s CRD propagation enforce rule changes.
 
-Threat Modeling: Document STRIDE analysis with diagram and mitigation plan.
+**3.3 Threat Modeling:** Document STRIDE analysis with diagram and mitigation plan.
 
 # Step 4: Run / Test
 # Validate schema
