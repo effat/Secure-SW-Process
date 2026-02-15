@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo "Validating rule schema..."
+python scripts/validate_schema.py rules/fsma_traceability.yaml || exit 1
+
+echo "Generating CRD..."
+python scripts/generate_crd.py rules/fsma_traceability.yaml || exit 1
+
+echo "Verifying static taint..."
+python scripts/verify_taint.py || exit 1
+
+echo "Pre-commit checks passed."
