@@ -1,0 +1,9 @@
+apiVersion: compliance.example.org/v1
+kind: TraceEvent
+metadata:
+  name: shipment-001
+spec:
+  lotCode: "LOT123"
+  sourceFacility: "FarmA"
+  destinationFacility: "DistributorB"
+  timestamp: "2026-02-01T10:00:00Z"
